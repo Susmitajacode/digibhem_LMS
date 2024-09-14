@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz and Assignment Grader</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Time!</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <input type="radio" name="q1" value="Paris" id="q1a"> Paris<br>
+                <input type="radio" name="q1" value="London" id="q1b"> London<br>
+                <input type="radio" name="q1" value="Berlin" id="q1c"> Berlin<br>
+            </div>
+
+            <div class="question">
+                <p>2. Solve: 5 + 3 = ?</p>
+                <input type="number" id="q2">
+            </div>
+
+            <div class="question">
+                <p>3. Choose the correct JavaScript data type for variables:</p>
+                <input type="radio" name="q3" value="Number" id="q3a"> Number<br>
+                <input type="radio" name="q3" value="Object" id="q3b"> Object<br>
+                <input type="radio" name="q3" value="String" id="q3c"> String<br>
+            </div>
+
+            <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

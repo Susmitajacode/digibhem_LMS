@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Tracker</title>
+    <link rel="stylesheet" href="Teacher_tracker.css">
+</head>
+
+<body>
+    <div class="tracker-container">
+        <h1>Teacher Tracker</h1>
+
+        <!-- Form to input teacher details -->
+        <form id="teacherForm">
+            <div class="form-group">
+                <label for="teacherName">Teacher Name:</label>
+                <input type="text" id="teacherName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="classTime">Class Time:</label>
+                <input type="time" id="classTime" required>
+            </div>
+
+            <button type="button" onclick="addTeacher()">Add Teacher</button>
+        </form>
+
+        <!-- Table to display teachers -->
+        <h2>Teacher List</h2>
+        <table id="teacherTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Class Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Teacher rows will be added here -->
+            </tbody>
+        </table>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="Teacher_tracker.js"></script>
+</body>
+
+</html>

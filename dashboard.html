@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Student-Teacher Dashboard</h1>
+        </header>
+
+        <!-- Buttons for different sections -->
+        <div class="buttons">
+            <button id="viewStudents" onclick="showContent('students')">View Students</button>
+            <button id="viewTeachers" onclick="showContent('teachers')">View Teachers</button>
+            <button id="viewAssignments" onclick="showContent('assignments')">Assignments</button>
+            <button id="viewMessages" onclick="showContent('messages')">Messages</button>
+        </div>
+
+        <!-- Content area -->
+        <div id="content" class="content-area">
+            <h2>Welcome to the Dashboard</h2>
+            <p>Select an option to view more details.</p>
+        </div>
+    </div>
+
+    <!-- External JS file -->
+    <script src="dashboard.js"></script>
+
+    <!-- Inline JS for showContent function -->
+    <script>
+        function showContent(section) {
+            let contentArea = document.getElementById('content');
+
+            if (section === 'students') {
+                contentArea.innerHTML = `
+                    <h2>Student List</h2>
+                    <ul>
+                        <li>John Doe - Grade 10</li>
+                        <li>Jane Smith - Grade 9</li>
+                        <li>Mike Johnson - Grade 11</li>
+                    </ul>
+                `;
+            } else if (section === 'teachers') {
+                contentArea.innerHTML = `
+                    <h2>Teacher List</h2>
+                    <ul>
+                        <li>Mr. Anderson - Mathematics</li>
+                        <li>Ms. Green - Science</li>
+                        <li>Mrs. Brown - English</li>
+                    </ul>
+                `;
+            } else if (section === 'assignments') {
+                contentArea.innerHTML = `
+                    <h2>Assignments</h2>
+                    <ul>
+                        <li>Math Homework - Due: 15th Sept</li>
+                        <li>Science Project - Due: 20th Sept</li>
+                        <li>English Essay - Due: 18th Sept</li>
+                    </ul>
+                `;
+            } else if (section === 'messages') {
+                contentArea.innerHTML = `
+                    <h2>Messages</h2>
+                    <p>You have no new messages.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+/* Reset and universal styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dashboard-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Button section */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* Individual button styling */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Content area */
+.content-area {
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.content-area h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+.content-area p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .content-area {
+    padding-top: 15px;
+  }
+}

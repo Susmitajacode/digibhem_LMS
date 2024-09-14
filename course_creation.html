@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Course Management</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+
+<body>
+    <header>
+        <h1>Course Content Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('create')">Create Content</a></li>
+                <li><a href="#" onclick="showSection('manage')">Manage Content</a></li>
+                <li><a href="#" onclick="showSection('upload')">Upload Files</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Create Content Section -->
+        <section id="create" class="content-section">
+            <h2>Create New Course Content</h2>
+            <form id="createForm">
+                <label for="courseTitle">Course Title:</label>
+                <input type="text" id="courseTitle" required>
+
+                <label for="courseDescription">Description:</label>
+                <textarea id="courseDescription" required></textarea>
+
+                <button type="button" onclick="createContent()">Create Content</button>
+            </form>
+        </section>
+
+        <!-- Manage Content Section -->
+        <section id="manage" class="content-section" style="display:none;">
+            <h2>Manage Existing Content</h2>
+            <div id="contentList">
+                <!-- Content items will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Upload Files Section -->
+        <section id="upload" class="content-section" style="display:none;">
+            <h2>Upload Course Files</h2>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" multiple>
+                <button type="button" onclick="uploadFiles()">Upload Files</button>
+            </form>
+            <div id="uploadStatus"></div>
+        </section>
+    </main>
+
+    <!-- Edit Content Modal -->
+    <div id="editModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Edit Content</h2>
+            <form id="editForm">
+                <label for="editTitle">Course Title:</label>
+                <input type="text" id="editTitle" required>
+
+                <label for="editDescription">Description:</label>
+                <textarea id="editDescription" required></textarea>
+
+                <button type="button" onclick="saveEdit()">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="courses.js"></script>
+</body>
+
+</html>
